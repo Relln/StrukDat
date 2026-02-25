@@ -9,7 +9,7 @@ public class MahasiswaMain10 {
         mhs1.tampilkanInformasi();
         mhs1.ubahKelas("SI 2K");
         mhs1.updateIpk(3.60);
-        mhs1.nilaiKinerja();
+        mhs1.tampilkanInformasi();
 
     }
 }

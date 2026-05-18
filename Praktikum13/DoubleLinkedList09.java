@@ -1,6 +1,7 @@
 package Praktikum13;
 
 public class DoubleLinkedList09 {
+
     Node09 head;
     Node09 tail;
 
@@ -102,6 +103,8 @@ public class DoubleLinkedList09 {
             System.out.println("Linked List kosong.");
             return;
         }
+        System.out.println("Data berikut berhasil dihapus dari awal:");
+        head.data.tampil();
 
         if (head == tail) {
             head = tail = null;
@@ -116,6 +119,8 @@ public class DoubleLinkedList09 {
             System.out.println("Linked List kosong.");
             return;
         }
+        System.out.println("Data berikut berhasil dihapus dari akhir:");
+        tail.data.tampil();
 
         if (head == tail) {
             head = tail = null;
@@ -127,7 +132,7 @@ public class DoubleLinkedList09 {
 
     public void print() {
         if (isEmpty()) {
-            System.out.println("Linked List masih kosong."); 
+            System.out.println("Linked List masih kosong.");
             return;
         }
         Node09 current = head;
@@ -138,4 +143,15 @@ public class DoubleLinkedList09 {
         }
     }
 
+    public void printReverse() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong.");
+            return;
+        }
+        Node09 current = tail;
+        while (current != null) {
+            current.data.tampil();
+            current = current.prev;
+        }
+    }
 }
